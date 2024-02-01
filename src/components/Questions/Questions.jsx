@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./Questions.scss";
 
-const Questions = () => {
-  const [section, setSection] = useState(1);
+const Questions = ({ section, setSection }) => {
   const [fromWhere, setFromWhere] = useState("");
   const [toWhere, setToWhere] = useState("");
   const [phone, setPhone] = useState("");
@@ -239,7 +238,27 @@ const Questions = () => {
           {emailError && <p className="error-email">{emailError}</p>}
         </div>
       )}
-      {section === 5 && <h1>You successfully submited, we will get back to you soon</h1>}
+      {section === 5 && (
+        <div className="success">
+          <div className="top-upper">
+            <p className="title">Thank you for considering us.</p>
+            <p className="second-title">
+              Our team has received your request and we will be reaching out within one business day
+              to provide your moving quote.
+            </p>
+            <p className="third-title">
+              If you have any questions in the meantime: Feel free to call us directly at (571) 594
+              9586
+            </p>
+          </div>
+          <button
+            onClick={() => {
+              window.location.reload();
+            }}>
+            Go back
+          </button>
+        </div>
+      )}
 
       <div className="buttons">
         {section > 1 && section !== 5 && (
