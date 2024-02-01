@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Navbar.scss"; // You can create this CSS file for styling
 import movers from "../../assets/logo.png";
 import facebook from "../../assets/facebook.svg";
@@ -21,6 +21,19 @@ const Navbar = () => {
     const input = document.getElementById("focus");
     input.focus();
   };
+
+  const menuRef = useRef(null);
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="wrapper-banner">
@@ -70,7 +83,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="hamburger-menu">
+        <div className="hamburger-menu" ref={menuRef}>
           <button className={`hamburger-button ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
             <div className="bar1"></div>
             <div className="bar2"></div>
