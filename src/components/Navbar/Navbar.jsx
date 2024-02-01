@@ -26,16 +26,19 @@ const Navbar = () => {
     <div className="wrapper-banner">
       <section className="banner">
         <div className="socials">
-          <a href="https://www.facebook.com/dylans.movers/">
+          <a href="https://www.facebook.com/dylans.movers/" target="_blank" rel="noreferrer">
             <img src={facebook} />
           </a>
-          <a href="https://www.instagram.com/dylanmovers_us/">
+          <a href="https://www.instagram.com/dylanmovers_us/" target="_blank" rel="noreferrer">
             <img src={instagram} />
           </a>
-          <a href="https://www.youtube.com/@dylantady1116/featured">
+          <a
+            href="https://www.youtube.com/@dylantady1116/featured"
+            target="_blank"
+            rel="noreferrer">
             <img src={youtube} />
           </a>
-          <a href="mailto:dylansmovers@gmail.com">
+          <a href="mailto:dylansmovers@gmail.com" target="_blank" rel="noreferrer">
             <img src={gmail} />
           </a>
         </div>

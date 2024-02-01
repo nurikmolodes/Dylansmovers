@@ -19,7 +19,7 @@ const Home = () => {
       <section className="header">
         {section !== 5 && (
           <div className="top">
-            <p className="title">DMV Movers</p>
+            <p className="title">DMV Area Movers</p>
             <p className="subtitle">
               Moving can be challenging, yet it doesn't need to turn into a nightmare.
             </p>
@@ -32,7 +32,7 @@ const Home = () => {
           <div className="subtitle">
             <p className="first">We are a moving company with personalized service.</p>
             <p className="second">
-              BoxStar Movers provide moving solutions to all our customers in the Northern Virginia,
+              Dylan's Movers provide moving solutions to all our customers in the Northern Virginia,
               Washington D.C. and Maryland areas.
             </p>
             <Link>More About Us</Link>
@@ -75,6 +75,70 @@ const Home = () => {
               your personal belongings are in good hands.
             </p>
           </p>
+        </div>
+      </section>
+      <section className="third-section">
+        <div className="title">
+          <p className="first">Trusted local movers in DMV area</p>
+          <p className="second">Our team is here to help you every step of the way.</p>
+        </div>
+        <div className="description">
+          <img src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/62f14e4cd09b133fa5995916_long%20distance.svg" />
+          <p>
+            If you’re planning a local move or a long-distance move, you need a company you can
+            trust to handle your belongings with extra care. We take the time to carefully pack your
+            belongings, load them onto our trucks, and transport them to your new home or office
+            safely and efficiently.
+          </p>
+        </div>
+      </section>
+      <section className="fourth-section">
+        <p className="title">Why should you choose our moving services?</p>
+        <div className="services">
+          <div className="service">
+            <img
+              src="https://www.usnews.com/dims4/USNEWS/be2ed29/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F97%2Fa9%2F30d751a044c29bb00bead735dee8%2F211005-moving-company-stock-stock.jpg"
+              alt=""
+            />
+            <p className="up">Assembly Not Required</p>
+            <p className="down">
+              We carefully take apart and reassemble your furniture back the way it was - so you can
+              have a restful first night!
+            </p>
+          </div>
+          <div className="service">
+            <img
+              src="https://www.usnews.com/dims4/USNEWS/be2ed29/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F97%2Fa9%2F30d751a044c29bb00bead735dee8%2F211005-moving-company-stock-stock.jpg"
+              alt=""
+            />
+            <p className="up">Full Move Protection</p>
+            <p className="down">
+              Our movers take important steps to protect your home and cover all of your belongings
+              in full protection.
+            </p>
+          </div>
+          <div className="service">
+            <img
+              src="https://www.usnews.com/dims4/USNEWS/be2ed29/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F97%2Fa9%2F30d751a044c29bb00bead735dee8%2F211005-moving-company-stock-stock.jpg"
+              alt=""
+            />
+            <p className="up">Packing Services</p>
+            <p className="down">
+              Let your moving stress melt away, move with Dylan' Movers knowing that your family's
+              belongings are safe.
+            </p>
+          </div>
+          <div className="service">
+            <img
+              src="https://www.usnews.com/dims4/USNEWS/be2ed29/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F97%2Fa9%2F30d751a044c29bb00bead735dee8%2F211005-moving-company-stock-stock.jpg"
+              alt=""
+            />
+            <p className="up">Ready For Any Sizes</p>
+            <p className="down">
+              From moving one item to a huge house or a small office to a whole building, it makes
+              no difference to us, we have trucks for any size of your move
+            </p>
+          </div>
         </div>
       </section>
     </div>

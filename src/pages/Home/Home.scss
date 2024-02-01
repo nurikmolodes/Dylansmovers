@@ -130,4 +130,103 @@
       }
     }
   }
+  .third-section {
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    .title {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .first {
+        font-weight: 700;
+        font-size: 58px;
+        @media (max-width: 700px) {
+          font-size: 40px;
+        }
+      }
+      .second {
+        color: #777;
+        font-size: 32px;
+        line-height: 110%;
+        font-weight: lighter;
+        @media (max-width: 700px) {
+          font-size: 25px;
+        }
+      }
+    }
+    .description {
+      background-color: #f7f7f7;
+      padding: 20px;
+      max-width: 1030px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      gap: 30px;
+      img {
+        width: 40px;
+      }
+      p {
+        font-weight: lighter;
+        color: #444;
+      }
+    }
+  }
+  .fourth-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+    margin-top: 100px;
+    padding: 20px;
+    .title {
+      line-height: 110%;
+      font-weight: 700;
+      font-size: 48px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      @media (max-width: 1100px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: 566px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+        img {
+          width: 250px;
+        }
+        .up {
+          color: #3d204f;
+          font-size: 28px;
+          font-weight: 700;
+          line-height: 110%;
+          max-width: 220px;
+        }
+        .down {
+          font-weight: lighter;
+          font-size: 19px;
+          max-width: 220px;
+          color: #3d204f;
+          height: 100%;
+        }
+      }
+    }
+  }
 }
