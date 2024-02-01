@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.scss";
+import Questions from "../../components/Questions/Questions";
 
 const Home = () => {
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
+
+  const next = () => {};
   return (
     <div
       className="home"
@@ -15,16 +20,7 @@ const Home = () => {
             Moving can be challenging, yet it doesn't need to turn into a nightmare.
           </p>
         </div>
-        <form className="bottom">
-          <input required type="text" placeholder="Moving from Zip, City or State" />
-          <input
-            required
-            style={{ marginLeft: "1px" }}
-            type="text"
-            placeholder="Moving to Zip, City or State"
-          />
-          <button type="submit">Next</button>
-        </form>
+        <Questions />
       </section>
     </div>
   );

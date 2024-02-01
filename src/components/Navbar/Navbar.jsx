@@ -17,16 +17,16 @@ const Navbar = () => {
     <>
       <section className="banner">
         <div className="socials">
-          <a>
+          <a href="https://www.facebook.com/dylans.movers/">
             <img src={facebook} />
           </a>
-          <a>
+          <a href="https://www.instagram.com/dylanmovers_us/">
             <img src={instagram} />
           </a>
-          <a>
+          <a href="https://www.youtube.com/@dylantady1116/featured">
             <img src={youtube} />
           </a>
-          <a>
+          <a href="mailto:dylansmovers@gmail.com">
             <img src={gmail} />
           </a>
         </div>

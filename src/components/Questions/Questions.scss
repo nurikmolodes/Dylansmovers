@@ -1,0 +1,120 @@
+.questions {
+  display: flex;
+  gap: 1px;
+  margin-top: 40px;
+  margin-bottom: 200px;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 25px;
+  }
+  .question {
+    display: flex;
+    gap: 1px;
+    position: relative;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      width: 100%;
+    }
+    span {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      color: black;
+      font-weight: 700;
+    }
+    select {
+      width: 392px;
+      height: 80px;
+      background: white;
+      color: black;
+      font-size: 18px;
+      border-radius: 10px;
+      padding: 10px;
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+      @media (max-width: 570px) {
+        height: 50px;
+      }
+    }
+    input {
+      width: 392px;
+      height: 80px;
+      background: white;
+      border: none;
+      padding: 10px;
+      color: black;
+      font-size: 18px;
+      border-radius: 10px;
+      &::placeholder {
+        font-size: 18px;
+      }
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+      @media (max-width: 570px) {
+        height: 50px;
+      }
+    }
+  }
+  button {
+    width: 194px;
+    height: 80px;
+    background: #f66600;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
+    @media (max-width: 570px) {
+      height: 50px;
+    }
+    &:disabled {
+      background: grey;
+    }
+  }
+  .back {
+    width: 90px;
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+  .back-mobile {
+    @media (min-width: 1000px) {
+      display: none;
+    }
+  }
+  .error-phone {
+    position: absolute;
+    left: 11px;
+    color: red;
+    bottom: 5px;
+    @media (max-width: 1000px) {
+      bottom: 88px;
+    }
+    @media (max-width: 570px) {
+      font-size: 12px;
+      top: 30px;
+    }
+  }
+
+  .error-email {
+    position: absolute;
+    right: 166px;
+    color: red;
+    bottom: 5px;
+    @media (max-width: 1000px) {
+      left: 11px;
+    }
+    @media (max-width: 570px) {
+      font-size: 12px;
+      top: 82px;
+      left: 11px;
+    }
+  }
+}
