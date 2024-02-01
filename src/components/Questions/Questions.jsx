@@ -127,7 +127,7 @@ const Questions = ({ section, setSection }) => {
       from_name: name,
       from_email: email,
       to_name: "dylansmovers@gmail.com",
-      message: `From="${fromWhere}" To="${toWhere}",  Date="${date}", Move Size="${selection}",  Name="${name}",  message="${text}",  Phone Number="${phone}", Email="${email}"`,
+      message: `From="${fromWhere}" To="${toWhere}",  Date Of Moving="${date}", Move Size="${selection}",  Name="${name}",  Message="${text}",  Phone Number="${phone}", Email="${email}"`,
     };
 
     emailjs
