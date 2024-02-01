@@ -159,6 +159,7 @@ const Questions = () => {
       {section === 1 && (
         <div className="question">
           <input
+            id="focus"
             type="text"
             placeholder="Moving From (Address)"
             value={fromWhere}

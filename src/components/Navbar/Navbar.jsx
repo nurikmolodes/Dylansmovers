@@ -5,12 +5,21 @@ import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
 import youtube from "../../assets/youtube.svg";
 import gmail from "../../assets/gmail.svg";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+  const navigate = useNavigate();
+
+  const getFreeQuote = () => {
+    navigate("/");
+    window.scrollTo(0, 0);
+    const input = document.getElementById("focus");
+    input.focus()
   };
 
   return (
@@ -73,7 +82,7 @@ const Navbar = () => {
             </div>
           )}
         </div>
-        <button>Get a free quote</button>
+        <button onClick={getFreeQuote}>Get a free quote</button>
       </nav>
     </>
   );
