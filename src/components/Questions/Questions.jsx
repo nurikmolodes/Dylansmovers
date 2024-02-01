@@ -160,14 +160,14 @@ const Questions = () => {
         <div className="question">
           <input
             type="text"
-            placeholder="From Where"
+            placeholder="Moving From (Address)"
             value={fromWhere}
             onChange={handleFromWhereChange}
           />
           {fromWhereError && <p>{fromWhereError}</p>}
           <input
             type="text"
-            placeholder="To Where"
+            placeholder="Moving To (Address)"
             value={toWhere}
             onChange={handleToWhereChange}
           />
@@ -176,7 +176,10 @@ const Questions = () => {
       )}
       {section === 2 && (
         <div className="question">
-          <input type="date" value={date} onChange={handleDateChange} />
+          <div className="date">
+            <span>Moving Date</span>
+            <input type="date" placeholder="Moving Date" value={date} onChange={handleDateChange} />
+          </div>
           {dateError && <p>{dateError}</p>}
           <select value={selection} onChange={handleSelectionChange}>
             <option value="">Move size</option>
