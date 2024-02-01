@@ -140,6 +140,22 @@ const Home = () => {
             </p>
           </div>
         </div>
+        <div className="text">
+          <img
+            src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/62f14e4bcba97a63247a4997_local.svg"
+            alt=""
+          />
+          <p>
+            At BoxStar Movers, we take the safety of your belongings seriously. That is why our
+            North Virginia movers take important steps to cover all of your belongings in full
+            protection. Our team is trained to pack your furniture and personal stuff carefully,
+            ensuring everything is wrapped to prevent damage during the move. We carefully take
+            apart and reassemble your furniture back the way it was - so you can have a restful
+            first night in your new home. We have trucks for any size of your move. Our fleet is
+            well-maintained and equipped with the latest technology to ensure your belongings are
+            transported safely. No matter how big or small your move is, we’re ready to assist you.
+          </p>
+        </div>
       </section>
     </div>
   );

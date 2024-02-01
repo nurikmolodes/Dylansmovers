@@ -228,5 +228,23 @@
         }
       }
     }
+    .text {
+      margin-top: 50px;
+      max-width: 1060px;
+      background: #f7f7f7;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      img {
+        width: 45px;
+      }
+      p {
+        color: #444;
+        font-weight: lighter;
+        text-align: left;
+      }
+    }
   }
 }
