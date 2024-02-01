@@ -126,7 +126,7 @@ const Questions = ({ section, setSection }) => {
     const templateParams = {
       from_name: name,
       from_email: email,
-      to_name: "nurikgentle@gmail.com",
+      to_name: "dylansmovers@gmail.com",
       message: `From="${fromWhere}" To="${toWhere}",  Date="${date}", Move Size="${selection}",  Name="${name}",  message="${text}",  Phone Number="${phone}", Email="${email}"`,
     };
 
