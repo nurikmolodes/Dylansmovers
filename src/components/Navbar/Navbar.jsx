@@ -19,11 +19,11 @@ const Navbar = () => {
     navigate("/");
     window.scrollTo(0, 0);
     const input = document.getElementById("focus");
-    input.focus()
+    input.focus();
   };
 
   return (
-    <>
+    <div className="wrapper-banner">
       <section className="banner">
         <div className="socials">
           <a href="https://www.facebook.com/dylans.movers/">
@@ -84,7 +84,7 @@ const Navbar = () => {
         </div>
         <button onClick={getFreeQuote}>Get a free quote</button>
       </nav>
-    </>
+    </div>
   );
 };
 

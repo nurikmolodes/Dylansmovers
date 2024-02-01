@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Questions.scss";
+import emailjs from "@emailjs/browser";
 
 const Questions = ({ section, setSection }) => {
   const [fromWhere, setFromWhere] = useState("");
@@ -117,6 +118,28 @@ const Questions = ({ section, setSection }) => {
     return true;
   };
 
+  const handleSubmit = (e) => {
+    const serviceId = "service_ha3hc6v";
+    const templateId = "template_s8tfxmi";
+    const publicKey = "F9zE3QCBEqsCRlSiI";
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: "nurikgentle@gmail.com",
+      message: `From="${fromWhere}" To="${toWhere}",  Date="${date}", Move Size="${selection}",  Name="${name}",  message="${text}",  Phone Number="${phone}", Email="${email}"`,
+    };
+
+    emailjs
+      .send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log("Email successfully sent", response);
+      })
+      .catch((error) => {
+        console.error("Error sending email", error);
+      });
+  };
+
   const handleNext = () => {
     switch (section) {
       case 1:
@@ -137,6 +160,7 @@ const Questions = ({ section, setSection }) => {
       case 4:
         if (validatePhone() && validateEmail()) {
           setSection(section + 1);
+          handleSubmit();
         }
         break;
       default:
