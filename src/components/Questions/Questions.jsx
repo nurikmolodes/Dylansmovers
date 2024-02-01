@@ -237,23 +237,25 @@ const Questions = () => {
       )}
       {section === 5 && <h1>You successfully submited, we will get back to you soon</h1>}
 
-      {section !== 5 && (
-        <button
-          onClick={handleNext}
-          disabled={
-            (section === 1 && (!fromWhere.trim() || !toWhere.trim())) ||
-            (section === 2 && (!date.trim() || !selection.trim())) ||
-            (section === 3 && !name.trim()) ||
-            (section === 4 && (!phone.trim() || !email.trim()))
-          }>
-          {section === 4 ? "Submit" : "Next"}
-        </button>
-      )}
-      {section > 1 && section !== 5 && (
-        <button className="back-mobile" onClick={handleBack}>
-          Back
-        </button>
-      )}
+      <div className="buttons">
+        {section > 1 && section !== 5 && (
+          <button className="back-mobile" onClick={handleBack}>
+            Back
+          </button>
+        )}
+        {section !== 5 && (
+          <button
+            onClick={handleNext}
+            disabled={
+              (section === 1 && (!fromWhere.trim() || !toWhere.trim())) ||
+              (section === 2 && (!date.trim() || !selection.trim())) ||
+              (section === 3 && !name.trim()) ||
+              (section === 4 && (!phone.trim() || !email.trim()))
+            }>
+            {section === 4 ? "Submit" : "Next"}
+          </button>
+        )}
+      </div>
     </div>
   );
 };

@@ -6,7 +6,7 @@
   @media (max-width: 1000px) {
     flex-direction: column;
     width: 100%;
-    padding: 0 25px;
+    padding: 0 10px;
   }
   .question {
     display: flex;
@@ -30,13 +30,13 @@
       background: white;
       color: black;
       font-size: 18px;
-      border-radius: 10px;
+      border-radius: 5px;
       padding: 10px;
       @media (max-width: 1000px) {
         width: 100%;
       }
       @media (max-width: 570px) {
-        height: 50px;
+        height: 70px;
       }
     }
     input {
@@ -47,7 +47,7 @@
       padding: 10px;
       color: black;
       font-size: 18px;
-      border-radius: 10px;
+      border-radius: 5px;
       &::placeholder {
         font-size: 18px;
       }
@@ -55,7 +55,7 @@
         width: 100%;
       }
       @media (max-width: 570px) {
-        height: 50px;
+        height: 70px;
       }
     }
   }
@@ -67,12 +67,12 @@
     font-size: 24px;
     cursor: pointer;
     position: relative;
-    border-radius: 10px;
+    border-radius: 5px;
     @media (max-width: 1000px) {
       width: 100%;
     }
     @media (max-width: 570px) {
-      height: 50px;
+      height: 70px;
     }
     &:disabled {
       background: grey;
@@ -116,5 +116,8 @@
       top: 82px;
       left: 11px;
     }
+  }
+  .buttons {
+    display: flex;
   }
 }
