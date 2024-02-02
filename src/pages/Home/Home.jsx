@@ -12,13 +12,51 @@ import VideoPlayer from "../../components/VideoSlider/VideoSlider";
 
 const Home = () => {
   const [section, setSection] = useState(1);
+
+  const reviews = [
+    {
+      name: "Hannah Ashenafi",
+      text: "Donnell and Luis were extremely professional, helpful, and efficient! They made sure our move went smoothly and handled our things with care to make sure nothing was broken. Also the prices were much lower than what other moving companies quoted me. I will definitely book with Dylan’s again in the future.",
+      link: "https://www.google.com/maps/reviews/@38.8673125,-77.2732991,17z/data=!4m5!14m4!1m3!1m2!1s103011729655769189642!2s0x89b64d4ee2f00ecf:0xd6380de506727cc3?hl=en-US",
+    },
+    {
+      name: "chang shu",
+      text: "Professional service done by all the movers, especially thanks to Luis and David who leads the moving fast and smooth.",
+      link: "https://www.google.com/maps/reviews/@38.9520773,-77.3952458,12z/data=!4m5!14m4!1m3!1m2!1s106467115595804983599!2s0x89b64d4ee2f00ecf:0xd6380de506727cc3?hl=en-US&entry=ttu",
+    },
+    {
+      name: "Eva Polsky",
+      text: "The guys totally rocked it today during my move! They showed up on time and had the utmost respect and patience with me while moving. They helped me pack all the little things, wrapped everything really well, disassembled and reassembled my bed frame, dresser, and computer desk. So happy I didn’t have to do that by myself! Everything was finished in just a few hours, which is way faster than I expected. 5 stars all the way! Highly recommended.",
+      link: "https://www.google.com/maps/contrib/113845499942647097788/place/ChIJzw7w4k5NtokRw3xyBuUNONY/@35.2954595,-108.4816841,4z/data=!4m6!1m5!8m4!1e1!2s113845499942647097788!3m1!1e1?hl=en-US&entry=ttu",
+    },
+    {
+      name: "Jaclyn O'Day",
+      text: "I've used Dylan's Movers twice for in town moves in DC and they have done an excellent job both times. They are affordable, professional, personable, and overall made it a great moving experience. Their communication leading up to the move and on move day is on point. They bring plastic wrap, moving blankets, and tools to assemble and disassemble furniture.",
+      link: "https://www.google.com/maps/contrib/100659762590463831802/place/ChIJzw7w4k5NtokRw3xyBuUNONY/@37.0204163,-85.5283772,3z/data=!4m4!1m3!8m2!1e1!2s100659762590463831802?hl=en-US&entry=ttu",
+    },
+    {
+      name: "Christian M",
+      text: "Dylan and Luis did a great job with the move. Professional, efficient, and handled all items with care. Highly recommend for your move in the DMV area.",
+      link: "https://www.google.com/maps/reviews/@31.4077468,-118.2911636,4z/data=!4m5!14m4!1m3!1m2!1s115809383069657167752!2s0x89b64d4ee2f00ecf:0xd6380de506727cc3?hl=en-US",
+    },
+    {
+      name: "katie seaman",
+      text: "Dylan and his team have literally been LIFE SAVERS for me during my move. I travel full time for work and my schedule is insanely hectic and they have been able to work with me to keep the stress from moving as low as possible. They helped pack my entire apartment which was a feat and move it into storage temporarily and then they also helped me move my stuff from the unit to my new apartment. I would not have been able to do this move without their team. Firmly recommend!!",
+      link: "https://www.google.com/maps/contrib/101008673237131904317/place/ChIJzw7w4k5NtokRw3xyBuUNONY/@39.7870524,-76.5504167,8z/data=!4m6!1m5!8m4!1e1!2s101008673237131904317!3m1!1e1?hl=en-US&entry=ttu",
+    },
+    {
+      name: "Loretta",
+      text: "Ronaldo and Luis were amazing!! They helped me with my little move as I was switching apartments in the same building! The move went very smoothly, they took great care of my stuff and really thought through on how to move my things carefully! I’m very happy with the service - thank you so much! Will definitely be using you guys again in the future!",
+      link: "https://www.google.com/maps/contrib/110751630925060173286/place/ChIJzw7w4k5NtokRw3xyBuUNONY/@39.0358297,-98.9087648,5z/data=!4m6!1m5!8m4!1e1!2s110751630925060173286!3m1!1e1?hl=en-US&entry=ttu",
+    },
+  ];
   return (
-    <div
-      className="home"
-      style={{
-        background: `url(https://cdngeneral.rentcafe.com//dmslivecafe/UploadedImages/0648e513-cd26-4793-aa98-6e99f15d527f.jpg)`,
-      }}>
-      <section className="header">
+    <div className="home">
+      <section
+        className="header"
+        style={{
+          background: `url(https://cdngeneral.rentcafe.com//dmslivecafe/UploadedImages/0648e513-cd26-4793-aa98-6e99f15d527f.jpg)`,
+        }}>
         {section !== 5 && (
           <div className="top">
             <p className="title">DMV Area Movers</p>
@@ -160,7 +198,54 @@ const Home = () => {
         </div>
       </section>
       <section className="fifth-section">
+        <p>Our Customers Say It Best!</p>
         <VideoPlayer />
+      </section>
+      <section className="sixth-section">
+        <p>Google Reviews</p>
+        <div className="reviews">
+          {reviews.map((item, index) => (
+            <a href={item.link} target="_blank" key={index} rel="noreferrer">
+              <div className="each">
+                <strong>{item.name}</strong>
+                <p>{item.text}</p>
+                <div className="bottom">
+                  <div className="stars">
+                    <img
+                      src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/64500d605fdd832677d9f30f_star-fill.svg"
+                      loading="lazy"
+                      alt=""
+                    />
+                    <img
+                      src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/64500d605fdd832677d9f30f_star-fill.svg"
+                      loading="lazy"
+                      alt=""
+                    />
+                    <img
+                      src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/64500d605fdd832677d9f30f_star-fill.svg"
+                      loading="lazy"
+                      alt=""
+                    />
+                    <img
+                      src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/64500d605fdd832677d9f30f_star-fill.svg"
+                      loading="lazy"
+                      alt=""
+                    />
+                    <img
+                      src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/64500d605fdd832677d9f30f_star-fill.svg"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </div>
+                  <img
+                    src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/64500ce46baead775783fb05_google_logo.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
       </section>
     </div>
   );
