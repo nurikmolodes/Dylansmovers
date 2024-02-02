@@ -7,6 +7,8 @@ import ready from "../../assets/ready.png";
 import fee from "../../assets/fee.png";
 import license from "../../assets/license.png";
 import movers from "../../assets/logo.png";
+import YouTubeSwiper from "../../components/VideoSlider/VideoSlider";
+import VideoPlayer from "../../components/VideoSlider/VideoSlider";
 
 const Home = () => {
   const [section, setSection] = useState(1);
@@ -146,7 +148,7 @@ const Home = () => {
             alt=""
           />
           <p>
-            At BoxStar Movers, we take the safety of your belongings seriously. That is why our
+            At Dylan's Movers, we take the safety of your belongings seriously. That is why our
             North Virginia movers take important steps to cover all of your belongings in full
             protection. Our team is trained to pack your furniture and personal stuff carefully,
             ensuring everything is wrapped to prevent damage during the move. We carefully take
@@ -156,6 +158,9 @@ const Home = () => {
             transported safely. No matter how big or small your move is, we’re ready to assist you.
           </p>
         </div>
+      </section>
+      <section className="fifth-section">
+        <VideoPlayer />
       </section>
     </div>
   );
