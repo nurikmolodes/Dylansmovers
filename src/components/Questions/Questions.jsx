@@ -137,14 +137,14 @@ const Questions = ({ section, setSection }) => {
       from_email: email,
       to_name: "nurikgentle@gmail.com",
       fromWhere: fromWhere,
-      toWhere: toWhere,
+      to_Where: toWhere,
       date: date,
       selection: selection,
       name: name,
       message: text,
       email: email,
       phone: phone,
-      moveDate: formattedDate,
+      created: formattedDate,
     };
 
     emailjs
