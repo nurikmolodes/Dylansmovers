@@ -122,12 +122,29 @@ const Questions = ({ section, setSection }) => {
     const serviceId = "service_ha3hc6v";
     const templateId = "template_s8tfxmi";
     const publicKey = "F9zE3QCBEqsCRlSiI";
+    var currentDate = new Date();
+
+    // Get the current date components
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth() + 1; // Month is zero-indexed, so we add 1
+    const day = currentDate.getDate();
+
+    // Format the date as a string
+    const formattedDate = year + "-" + month + "-" + day;
 
     const templateParams = {
       from_name: name,
       from_email: email,
-      to_name: "dylansmovers@gmail.com",
-      message: `From="${fromWhere}" To="${toWhere}",  Date Of Moving="${date}", Move Size="${selection}",  Name="${name}",  Message="${text}",  Phone Number="${phone}", Email="${email}"`,
+      to_name: "nurikgentle@gmail.com",
+      fromWhere: fromWhere,
+      toWhere: toWhere,
+      date: date,
+      selection: selection,
+      name: name,
+      message: text,
+      email: email,
+      phone: phone,
+      moveDate: formattedDate,
     };
 
     emailjs
