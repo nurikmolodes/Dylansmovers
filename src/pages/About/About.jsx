@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/no-unescaped-entities */
 import "./About.scss";
 import tips from "../../assets/tips.png";
 import Accordion from "../../components/Accordion/Accordion";

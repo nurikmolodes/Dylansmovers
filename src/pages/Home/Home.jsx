@@ -1,13 +1,10 @@
-import React, { useState } from "react";
+/* eslint-disable react/no-unescaped-entities */
+import { useState } from "react";
 import "./Home.scss";
 import Questions from "../../components/Questions/Questions";
 import { Link } from "react-router-dom";
 import move from "../../assets/move.png";
-import ready from "../../assets/ready.png";
-import fee from "../../assets/fee.png";
-import license from "../../assets/license.png";
 import movers from "../../assets/logo.png";
-import YouTubeSwiper from "../../components/VideoSlider/VideoSlider";
 import VideoPlayer from "../../components/VideoSlider/VideoSlider";
 
 const Home = () => {

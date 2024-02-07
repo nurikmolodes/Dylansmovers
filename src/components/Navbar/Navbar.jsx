@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+/* eslint-disable react/no-unescaped-entities */
+import { useEffect, useRef, useState } from "react";
 import "./Navbar.scss"; // You can create this CSS file for styling
 import movers from "../../assets/logo.png";
 import facebook from "../../assets/facebook.svg";

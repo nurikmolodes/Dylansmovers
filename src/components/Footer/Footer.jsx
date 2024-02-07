@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/no-unescaped-entities */
 import "./Footer.scss";
 import { Link } from "react-router-dom";
 
