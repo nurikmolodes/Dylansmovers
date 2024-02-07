@@ -118,4 +118,27 @@
       }
     }
   }
+  .third {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+    .title {
+      text-align: center;
+      line-height: 110%;
+      color: #3d204f;
+      font-size: 48px;
+      font-weight: 700;
+      @media (max-width: 500px) {
+        font-size: 40px;
+      }
+    }
+  }
+  .image {
+    img {
+      width: 100%;
+    }
+  }
 }
