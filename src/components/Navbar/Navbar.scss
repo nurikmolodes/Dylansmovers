@@ -77,6 +77,9 @@
 
     .navbar-links li {
       margin-right: 20px;
+      .active {
+        color: #ff6600;
+      }
     }
 
     .navbar-links li a {
@@ -140,6 +143,9 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         padding: 10px;
         border-radius: 5px;
+        .active {
+          color: #ff6600;
+        }
       }
 
       .menu a {

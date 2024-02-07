@@ -5,7 +5,7 @@ import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
 import youtube from "../../assets/youtube.svg";
 import gmail from "../../assets/gmail.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +36,7 @@ const Navbar = () => {
       document.removeEventListener("click", handleClickOutside);
     };
   }, []);
+  const location = useLocation();
 
   return (
     <div className="wrapper-banner">
@@ -72,16 +73,26 @@ const Navbar = () => {
         <div className={`navbar-links`}>
           <ul>
             <li>
-              <a href="/">Services</a>
+              <Link to="/services" className={location.pathname === "/services" ? "active" : ""}>
+                Services
+              </Link>
             </li>
             <li>
-              <Link to="/movingtips">Moving Tips</Link>
+              <Link
+                to="/movingtips"
+                className={location.pathname === "/movingtips" ? "active" : ""}>
+                Moving Tips
+              </Link>
             </li>
             <li>
-              <a href="/">Service Areas</a>
+              <Link to="/areas" className={location.pathname === "/areas" ? "active" : ""}>
+                Service Areas
+              </Link>
             </li>
             <li>
-              <a href="/">About</a>
+              <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>
+                About
+              </Link>
             </li>
           </ul>
         </div>
@@ -93,10 +104,20 @@ const Navbar = () => {
           </button>
           {isOpen && (
             <div className="menu">
-              <a href="#">Services</a>
-              <Link to="/movingtips">Moving Tips</Link>
-              <a href="#">Service Areas</a>
-              <a href="#">About</a>
+              <Link to="/services" className={location.pathname === "/services" ? "active" : ""}>
+                Services
+              </Link>
+              <Link
+                to="/movingtips"
+                className={location.pathname === "/movingtips" ? "active" : ""}>
+                Moving Tips
+              </Link>
+              <Link to="/areas" className={location.pathname === "/areas" ? "active" : ""}>
+                Service Areas
+              </Link>
+              <Link to="/about" className={location.pathname === "/about" ? "active" : ""}>
+                About
+              </Link>
             </div>
           )}
         </div>
