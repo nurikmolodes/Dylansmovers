@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="very-bottom">
-          <p>©2023 BoxStar Moving Services Northern Virginia, All Rights Reserved.</p>
+          <p>©2023 Dylan's Moving Services Northern Virginia, All Rights Reserved.</p>
           <div className="two-links">
             <a href="">Terms & Conditions</a>
             <a href="">Privacy Policy</a>

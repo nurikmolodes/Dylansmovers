@@ -308,7 +308,7 @@ const Home = () => {
         <div className="text">
           <p>
             Are you overwhelmed by the approaching move? Let your moving stress melt away and move
-            with BoxStar Movers, knowing your family's belongings are safe. Our team of experienced
+            with Dylan's Movers, knowing your family's belongings are safe. Our team of experienced
             local movers in Northern VA is dedicated to providing our customers with the best
             experience possible. We’re ready to organize your move for you, but if you want to do it
             yourself, we provide helpful moving tips to help you keep everything seamless and under
