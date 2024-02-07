@@ -18,8 +18,10 @@ const Navbar = () => {
   const getFreeQuote = () => {
     navigate("/");
     window.scrollTo(0, 0);
-    const input = document.getElementById("focus");
-    input.focus();
+    setTimeout(() => {
+      const input = document.getElementById("focus");
+      input.focus();
+    }, 0);
   };
 
   const menuRef = useRef(null);
