@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.scss";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
               loading="lazy"
               alt=""
             /> */}
-            <a>(571) 594 9586</a>
+            <a href="tel:5715949586">(571) 594 9586</a>
           </li>
           <li>
             {/* <img
@@ -21,7 +22,7 @@ const Footer = () => {
               loading="lazy"
               alt=""
             /> */}
-            <a>dylansmovers@gmail.com</a>
+            <a href="mailto:dylansmovers@gmail.com">dylansmovers@gmail.com</a>
           </li>
           <li>
             {/* {" "}
@@ -30,7 +31,9 @@ const Footer = () => {
               loading="lazy"
               alt=""
             /> */}
-            <a>9411 Lee Hwy #103, Fairfax, VA 22031</a>
+            <a href="https://www.google.com/maps?ll=38.867822,-77.27008&z=17&t=m&hl=en&gl=US&mapclient=embed&cid=15436103000119213251">
+              9411 Lee Hwy #103, Fairfax, VA 22031
+            </a>
           </li>
         </ul>
         <div className="map_block">
@@ -62,7 +65,7 @@ const Footer = () => {
             <a href="">FAQ</a>
           </li>
           <li>
-            <a href="">Moving Tips</a>
+            <Link to="/movingtips">Moving Tips</Link>
           </li>
           <li>
             <a href="">Services</a>

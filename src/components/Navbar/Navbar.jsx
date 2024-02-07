@@ -5,7 +5,7 @@ import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
 import youtube from "../../assets/youtube.svg";
 import gmail from "../../assets/gmail.svg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,10 +62,10 @@ const Navbar = () => {
       </section>
       <nav className="navbar">
         <div className="navbar-logo">
-          <a href="/">
+          <Link to="/">
             <img src={movers} />
             <span>Dylan's movers + cleaning</span>
-          </a>
+          </Link>
         </div>
         <div className={`navbar-links`}>
           <ul>
@@ -73,7 +73,7 @@ const Navbar = () => {
               <a href="/">Services</a>
             </li>
             <li>
-              <a href="/">Moving Tips</a>
+              <Link to="/movingtips">Moving Tips</Link>
             </li>
             <li>
               <a href="/">Service Areas</a>
@@ -92,7 +92,7 @@ const Navbar = () => {
           {isOpen && (
             <div className="menu">
               <a href="#">Services</a>
-              <a href="#">Moving Tips</a>
+              <Link to="/movingtips">Moving Tips</Link>
               <a href="#">Service Areas</a>
               <a href="#">About</a>
             </div>
