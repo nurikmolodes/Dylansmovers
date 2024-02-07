@@ -247,6 +247,80 @@ const Home = () => {
           ))}
         </div>
       </section>
+      <section className="seventh-section">
+        <div className="resources">
+          <div className="resource">
+            <img
+              src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/62d65754ca4169533bf13b63_DEPofTransport.svg"
+              loading="lazy"
+              id="w-node-e3a9650a-7038-0a90-c6dd-7019f6aee335-c4813a8a"
+              alt="Department Of Transportation Badge"
+            />
+          </div>
+          <div id="w-node-_0d0823f4-eb21-f980-b3b0-1e1fc4813a90-c4813a8a" className="resource">
+            <img
+              src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/62d6575417aecdb9447d268b_Yelp.svg"
+              loading="lazy"
+              alt="YELP Badge"
+            />
+          </div>
+          <div id="w-node-_0d0823f4-eb21-f980-b3b0-1e1fc4813a8c-c4813a8a" className="resource">
+            <img
+              src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/62dfbfedb83ee8b2bbe92dd7_Thumbtrack.svg"
+              loading="lazy"
+              id="w-node-_0d0823f4-eb21-f980-b3b0-1e1fc4813a8d-c4813a8a"
+              alt="Thumbtack Top Pro Badge"
+            />
+          </div>
+          <div id="w-node-_0d0823f4-eb21-f980-b3b0-1e1fc4813a8e-c4813a8a" className="resource">
+            <img
+              src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/62d65754e934bfa723672aac_Google.svg"
+              loading="lazy"
+              alt="Google 5 stars badge"
+            />
+          </div>
+          <div className="resource">
+            <img
+              src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/62dfbfdebf672a27e59b3dab_Angies.png"
+              loading="lazy"
+              id="w-node-_710dc1c9-f2a6-9e27-91f1-6d58005d2fce-c4813a8a"
+              alt="Angies List Super Service Award Badge"
+            />
+          </div>
+          <div id="w-node-_0d0823f4-eb21-f980-b3b0-1e1fc4813a92-c4813a8a" className="resource">
+            <img
+              src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/62d657543f9316c3b42ed4eb_HomeAdvisor.svg"
+              loading="lazy"
+              alt="Home Advisor Five Star Rating Badge"
+            />
+          </div>
+          <div id="w-node-_0d0823f4-eb21-f980-b3b0-1e1fc4813a94-c4813a8a" className="resource">
+            <img
+              src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/62d65754e934bfc658672aad_ProVirginiaMovers.svg"
+              loading="lazy"
+              alt="Pro Virginia Movers Badge"
+            />
+          </div>
+        </div>
+      </section>
+      <section className="eighth-section">
+        <p className="title">Forget about stress and move with Dylan's Movers.</p>
+        <div className="text">
+          <p>
+            Are you overwhelmed by the approaching move? Let your moving stress melt away and move
+            with BoxStar Movers, knowing your family's belongings are safe. Our team of experienced
+            local movers in Northern VA is dedicated to providing our customers with the best
+            experience possible. We’re ready to organize your move for you, but if you want to do it
+            yourself, we provide helpful moving tips to help you keep everything seamless and under
+            control.
+          </p>
+          <p>
+            Moving is hard, but it doesn’t have to be a nightmare. Check out our storage solutions,
+            packaging services, and more. Benefit from super-efficient moving services and enjoy
+            your new house, office, or apartment.
+          </p>
+        </div>
+      </section>
     </div>
   );
 };
