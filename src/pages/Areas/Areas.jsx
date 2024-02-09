@@ -1,78 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import "./Areas.scss";
-import tips from "../../assets/tips.png";
-import Accordion from "../../components/Accordion/Accordion";
 import { useEffect } from "react";
 
 const Areas = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const firstOfAll = [
-    {
-      title: "Why Should I Hire a Professional Mover?",
-      content:
-        "Professional movers make what’s usually a stressful process effortless. They are skilled moving experts that can help get all your goods from A to B without hassle.",
-    },
-    {
-      title: "When is the Best Time to Move?",
-      content: "There’s no best time to move - we’re here whenever you need to start moving!",
-    },
-    {
-      title: "My Move Date Has Changed; What Should I Do?",
-      content:
-        "Please get in touch with us with the new date as soon as possible so we can reschedule.",
-    },
-  ];
-  const fiveWeeks = [
-    {
-      title: "How and When Should I Pay?",
-      content:
-        "Please pay using cash or debit/credit card at the move. We kindly note that all card transactions incur a 4% convenience fee, and we do not accept personal checks.",
-    },
-    {
-      title: "Am I Protected Against Loss Or Damage While My Goods Are in Transit?",
-      content:
-        "All movers have standard carrier-based liability with limited protection on your goods. Please read our terms & conditions or contact our support team to learn more.",
-    },
-    {
-      title: "Can I Move Jewelry and Other Valuable?",
-      content:
-        "Yes, but please declare valuable items to us first to ensure their proper handling.",
-    },
-  ];
-  const firstWeek = [
-    {
-      title: "Can I Move My House Plants?",
-      content:
-        "We can transport your house plants. However, we cannot accept any responsibility for damage during the moving process (i.e., lack of water and light, seizure on interstate lines).",
-    },
-    {
-      title: "Can I Move My Pets?",
-      content: "No, we don't move pets unfortunately.",
-    },
-    {
-      title: "How Far in Advance Should I Schedule My Move?",
-      content: "We highly recommend scheduling your move with us as soon as possible.",
-    },
-  ];
-  const duringTheMove = [
-    {
-      title: "Are There Any Items That You Cannot Move?",
-      content:
-        "Dylan's Movers will not move any items with health and safety concerns. These include hazardous or combustible materials such as propane tanks, firearms, paints, aerosols,etc. Contact us if you have any queries about your goods.",
-    },
-    {
-      title: "Can the Movers Arrange the Furniture to My Liking in My New Home?",
-      content:
-        "Of course! We call ourselves a white-glove service for a reason - we want your move tofeel seamless! We’ll work with you to ensure you’re delighted with your furniture arrangements.",
-    },
-    {
-      title: "Can I Tip Movers?",
-      content:
-        "Sure! If you are satisfied with your moving experience, you’re more than welcome to tipyour movers.",
-    },
-  ];
 
   return (
     <div className="areas">

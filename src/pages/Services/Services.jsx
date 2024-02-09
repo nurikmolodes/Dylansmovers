@@ -1,5 +1,4 @@
 import "./Services.scss";
-import tips from "../../assets/tips.png";
 import Accordion from "../../components/Accordion/Accordion";
 import { useEffect } from "react";
 
