@@ -6,6 +6,10 @@ import { Link } from "react-router-dom";
 import move from "../../assets/move.png";
 import movers from "../../assets/logo.png";
 import VideoPlayer from "../../components/VideoSlider/VideoSlider";
+import why1 from "../../assets/why1.png";
+import why2 from "../../assets/why2.png";
+import why3 from "../../assets/why3.png";
+import why4 from "../../assets/why4.png";
 
 const Home = () => {
   const [section, setSection] = useState(1);
@@ -133,10 +137,7 @@ const Home = () => {
         <p className="title">Why should you choose our moving services?</p>
         <div className="services">
           <div className="service">
-            <img
-              src="https://www.usnews.com/dims4/USNEWS/be2ed29/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F97%2Fa9%2F30d751a044c29bb00bead735dee8%2F211005-moving-company-stock-stock.jpg"
-              alt=""
-            />
+            <img src={why3} alt="" />
             <p className="up">Assembly Not Required</p>
             <p className="down">
               We carefully take apart and reassemble your furniture back the way it was - so you can
@@ -144,10 +145,7 @@ const Home = () => {
             </p>
           </div>
           <div className="service">
-            <img
-              src="https://www.usnews.com/dims4/USNEWS/be2ed29/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F97%2Fa9%2F30d751a044c29bb00bead735dee8%2F211005-moving-company-stock-stock.jpg"
-              alt=""
-            />
+            <img src={why2} alt="" />
             <p className="up">Full Move Protection</p>
             <p className="down">
               Our movers take important steps to protect your home and cover all of your belongings
@@ -155,10 +153,7 @@ const Home = () => {
             </p>
           </div>
           <div className="service">
-            <img
-              src="https://www.usnews.com/dims4/USNEWS/be2ed29/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F97%2Fa9%2F30d751a044c29bb00bead735dee8%2F211005-moving-company-stock-stock.jpg"
-              alt=""
-            />
+            <img src={why1} alt="" />
             <p className="up">Packing Services</p>
             <p className="down">
               Let your moving stress melt away, move with Dylan' Movers knowing that your family's
@@ -166,10 +161,7 @@ const Home = () => {
             </p>
           </div>
           <div className="service">
-            <img
-              src="https://www.usnews.com/dims4/USNEWS/be2ed29/2147483647/thumbnail/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F97%2Fa9%2F30d751a044c29bb00bead735dee8%2F211005-moving-company-stock-stock.jpg"
-              alt=""
-            />
+            <img src={why4} alt="" />
             <p className="up">Ready For Any Sizes</p>
             <p className="down">
               From moving one item to a huge house or a small office to a whole building, it makes

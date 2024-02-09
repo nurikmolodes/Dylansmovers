@@ -1,0 +1,153 @@
+.services {
+  width: 100%;
+  header {
+    background: url("https://assets-global.website-files.com/62d5bb08a5f710333a158d60/649af2a8b88f3b3493a0fb96_62d7ad03ca6635d1777d4994_Prince-William-County.webp");
+    background-position: center;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    p {
+      font-size: 76px;
+      font-weight: 700;
+      line-height: 100%;
+      color: #fff;
+      text-align: center;
+      @media (max-width: 580px) {
+        font-size: 60px;
+      }
+      @media (max-width: 350px) {
+        font-size: 50px;
+      }
+    }
+    span {
+      color: #fff;
+      text-align: center;
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: lighter;
+      max-width: 600px;
+      @media (max-width: 350px) {
+        font-size: 22px;
+      }
+    }
+  }
+  .under-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 100px 20px;
+    @media (max-width: 922px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      p {
+        line-height: 110%;
+        color: #3d204f;
+        font-size: 48px;
+        font-weight: 700;
+        max-width: 635px;
+        @media (max-width: 650px) {
+          text-align: center;
+        }
+      }
+      span {
+        color: #777;
+        font-size: 32px;
+        line-height: 110%;
+        font-weight: lighter;
+        max-width: 635px;
+      }
+    }
+    img {
+      max-width: 400px;
+      @media (max-width: 922px) {
+        max-width: 100%;
+      }
+    }
+  }
+  .second {
+    text-align: center;
+    .title {
+      line-height: 110%;
+      color: #3d204f;
+      font-size: 48px;
+      font-weight: 700;
+    }
+    .labels {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      padding: 100px 20px;
+      @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      .label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        max-width: 330px;
+        img {
+          width: 90px;
+        }
+        span {
+          color: #f66600;
+          font-size: 25px;
+          line-height: 32px;
+          font-weight: bolder;
+        }
+        p {
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 32px;
+          font-weight: lighter;
+          color: #333;
+        }
+      }
+    }
+  }
+  .third {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+    .title {
+      text-align: center;
+      line-height: 110%;
+      color: #3d204f;
+      font-size: 48px;
+      font-weight: 700;
+      @media (max-width: 500px) {
+        font-size: 40px;
+      }
+    }
+    .paragraph {
+      font-weight: lighter;
+      line-height: 110%;
+      color: #3d204f;
+      max-width: 900px;
+      text-align: center;
+      padding: 20px;
+      font-size: 23px;
+    }
+  }
+  .image {
+    img {
+      width: 100%;
+    }
+  }
+}
