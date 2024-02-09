@@ -63,7 +63,7 @@
         font-size: 15px;
       }
     }
-    @media (max-width: 900px) {
+    @media (max-width: 980px) {
       .navbar-links {
         display: none;
       }
@@ -99,7 +99,7 @@
       cursor: pointer;
       // border: 1px solid rgb(28, 24, 24);
       // border: 1px solid black;
-      @media (max-width: 900px) {
+      @media (max-width: 980px) {
         position: fixed;
         top: auto;
         bottom: 0%;
@@ -112,7 +112,7 @@
     .hamburger-menu {
       position: relative;
       display: none;
-      @media (max-width: 900px) {
+      @media (max-width: 980px) {
         display: block;
       }
       .hamburger-button {

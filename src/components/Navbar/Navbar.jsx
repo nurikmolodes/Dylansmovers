@@ -74,6 +74,11 @@ const Navbar = () => {
         <div className={`navbar-links`}>
           <ul>
             <li>
+              <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+                Home
+              </Link>
+            </li>
+            <li>
               <Link to="/services" className={location.pathname === "/services" ? "active" : ""}>
                 Services
               </Link>
@@ -105,6 +110,9 @@ const Navbar = () => {
           </button>
           {isOpen && (
             <div className="menu">
+              <Link to="/" className={location.pathname === "/" ? "active" : ""}>
+                Home
+              </Link>
               <Link to="/services" className={location.pathname === "/services" ? "active" : ""}>
                 Services
               </Link>
