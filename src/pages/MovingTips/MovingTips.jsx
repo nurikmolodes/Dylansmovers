@@ -1,8 +1,12 @@
 import "./MovingTips.scss";
 import tips from "../../assets/tips.png";
 import Accordion from "../../components/Accordion/Accordion";
+import { useEffect } from "react";
 
 const MovingTips = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const firstOfAll = [
     {
       title: "Let us know any changes",

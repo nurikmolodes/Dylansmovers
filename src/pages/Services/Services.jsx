@@ -1,8 +1,12 @@
 import "./Services.scss";
 import tips from "../../assets/tips.png";
 import Accordion from "../../components/Accordion/Accordion";
+import { useEffect } from "react";
 
 const Services = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const firstOfAll = [
     {
       title: "What defines a local move",
@@ -74,7 +78,7 @@ const Services = () => {
     {
       title: "How do you pack my belongings",
       content:
-        "At BoxStar Movers, we take a layered approach to packing. We pack your clothing right on top of the items that need protection and cushioning first, then finally build up all your heavier boxes with crumpled paper and protective items so they don’t break anything in their path. We use sturdy materials like moving-grade cardboard boxes, shrink-wrap and bubble wrap to protect your belongings.",
+        "At Dylan's Movers, we take a layered approach to packing. We pack your clothing right on top of the items that need protection and cushioning first, then finally build up all your heavier boxes with crumpled paper and protective items so they don’t break anything in their path. We use sturdy materials like moving-grade cardboard boxes, shrink-wrap and bubble wrap to protect your belongings.",
     },
     {
       title: "What should I pack myself and what can the moving company do for me?",
@@ -129,7 +133,7 @@ const Services = () => {
     {
       title: "Are There Any Items That You Cannot Move?",
       content:
-        "BoxStar Movers will not move any items with health and safety concerns. These include hazardous or combustible materials such as propane tanks, firearms, paints, aerosols, etc. Contact us if you have any queries about your goods.",
+        "Dylan's Movers will not move any items with health and safety concerns. These include hazardous or combustible materials such as propane tanks, firearms, paints, aerosols, etc. Contact us if you have any queries about your goods.",
     },
     {
       title: "Am I Protected Against Loss Or Damage While My Goods Are in Transit?",

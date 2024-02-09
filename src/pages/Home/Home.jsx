@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Home.scss";
 import Questions from "../../components/Questions/Questions";
 import { Link } from "react-router-dom";
@@ -51,6 +51,9 @@ const Home = () => {
       link: "https://www.google.com/maps/contrib/110751630925060173286/place/ChIJzw7w4k5NtokRw3xyBuUNONY/@39.0358297,-98.9087648,5z/data=!4m6!1m5!8m4!1e1!2s110751630925060173286!3m1!1e1?hl=en-US&entry=ttu",
     },
   ];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="home">
       <section

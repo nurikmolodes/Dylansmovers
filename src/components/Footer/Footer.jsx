@@ -59,16 +59,16 @@ const Footer = () => {
         <p className="title">About</p>
         <ul>
           <li>
-            <a href="">Why Us</a>
+            <Link to="/about">Why Us</Link>
           </li>
           <li>
-            <a href="">FAQ</a>
+            <Link to="/about">FAQ</Link>
           </li>
           <li>
             <Link to="/movingtips">Moving Tips</Link>
           </li>
           <li>
-            <a href="">Services</a>
+            <Link to="services">Services</Link>
           </li>
         </ul>
       </div>
