@@ -19,7 +19,7 @@ const Admin = () => {
   }, []);
 
   const handleLogin = () => {
-    if (username === "admin" && password === "password") {
+    if (username === "dylshatAka" && password === "thisismovingcs5060") {
       localStorage.setItem("isLoggedIn", true);
       localStorage.setItem("username", username);
       setLoggedIn(true);
