@@ -1,11 +1,12 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/no-unescaped-entities */
 import "./Footer.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
   return (
-    <div className="footer">
+    <div className={`footer ${location !== "/admin-dashboard" && "marginBottom"}`}>
       <div className="contact">
         <p className="title">Contact Us</p>
         <ul>
