@@ -89,6 +89,10 @@ const Dashboard = ({ handleLogout }) => {
     }
   }
   const addVideoReview = async () => {
+    if (!newVideoReview.link) {
+      alert("Please fill out the field");
+      return;
+    }
     setLoadingAddVideoReview(true);
 
     try {
