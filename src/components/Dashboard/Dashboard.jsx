@@ -162,7 +162,7 @@ const Dashboard = ({ handleLogout }) => {
           <h3 className="form-title">Add New Video Review</h3>
           <input
             type="text"
-            placeholder="Add embedded link to a YouTube video"
+            placeholder="Add a YouTube video link"
             name="link"
             value={newVideoReview.link}
             onChange={handleVideoReviewChange}
