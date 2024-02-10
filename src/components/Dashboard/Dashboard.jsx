@@ -70,7 +70,29 @@ const Dashboard = ({ handleLogout }) => {
 
     setLoadingAddReview(false);
   };
-
+  function embedYoutubeLink(link) {
+    // Check if the input link matches any of the supported formats
+    if (
+      link.match(
+        /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/shorts\/)([\w-]+)/,
+      )
+    ) {
+      // Extract the video ID from the link
+      var videoId = link.match(
+        /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/shorts\/)([\w-]+)/,
+      )[1];
+      // Construct the embedded link
+      var embeddedLink = "https://www.youtube.com/embed/" + videoId;
+      return embeddedLink;
+    }
+    // Check if the input link is already an embedded link
+    else if (link.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/embed\/)([\w-]+)/)) {
+      // Return the embedded link unchanged
+      return link;
+    } else {
+      return "Invalid YouTube link format";
+    }
+  }
   const addVideoReview = async () => {
     setLoadingAddVideoReview(true);
 
@@ -90,11 +112,14 @@ const Dashboard = ({ handleLogout }) => {
     }
 
     try {
-      await addDoc(videoReviewsCollectionRef, { link: videoLink });
+      await addDoc(videoReviewsCollectionRef, { link: embedYoutubeLink(videoLink) });
       setNewVideoReview({ link: "" });
 
       const data = await getDocs(videoReviewsCollectionRef);
-      setVideoReviews([{ link: videoLink, id: data.docs[0].id }, ...videoReviews]);
+      setVideoReviews([
+        { link: embedYoutubeLink(videoLink), id: data.docs[0].id },
+        ...videoReviews,
+      ]);
     } catch (error) {
       console.error("Error adding video review:", error.message);
       alert("An error occurred while adding the video review. Please try again.");
