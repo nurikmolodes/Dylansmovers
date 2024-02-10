@@ -22,12 +22,17 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
   console.log("REVIEWS", reviews);
   useEffect(() => {
-    const getReviews = async () => {
-      const data = await getDocs(reviewsCollectionRef);
-      setReviews(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    const fetchData = async () => {
+      setLoading(true);
+      const reviewsData = await getDocs(reviewsCollectionRef);
+      const sortedReviews = reviewsData.docs
+        .map((doc) => ({ ...doc.data(), id: doc.id }))
+        .sort((a, b) => b.timestamp - a.timestamp);
+      setReviews(sortedReviews);
       setLoading(false);
     };
-    getReviews();
+
+    fetchData();
   }, []);
 
   useEffect(() => {

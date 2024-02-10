@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import "./Dashboard.scss";
 import "../../firebase";
 import { db } from "../../firebase";
-import { addDoc, collection, deleteDoc, doc, getDocs } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, getDocs, serverTimestamp } from "firebase/firestore";
 
 const Dashboard = ({ handleLogout }) => {
   const reviewsCollectionRef = collection(db, "reviews");
@@ -26,10 +26,15 @@ const Dashboard = ({ handleLogout }) => {
       setLoading(true);
       const reviewsData = await getDocs(reviewsCollectionRef);
       const videoReviewsData = await getDocs(videoReviewsCollectionRef);
-      setReviews(reviewsData.docs.map((doc) => ({ ...doc.data(), id: doc.id })).reverse());
-      setVideoReviews(
-        videoReviewsData.docs.map((doc) => ({ ...doc.data(), id: doc.id })).reverse(),
-      );
+      // Sort reviews and video reviews by timestamp before updating the state
+      const sortedReviews = reviewsData.docs
+        .map((doc) => ({ ...doc.data(), id: doc.id }))
+        .sort((a, b) => b.timestamp - a.timestamp);
+      const sortedVideoReviews = videoReviewsData.docs
+        .map((doc) => ({ ...doc.data(), id: doc.id }))
+        .sort((a, b) => b.timestamp - a.timestamp);
+      setReviews(sortedReviews);
+      setVideoReviews(sortedVideoReviews);
       setLoading(false);
     };
 
@@ -37,11 +42,6 @@ const Dashboard = ({ handleLogout }) => {
   }, []);
 
   const addReview = async () => {
-    // const isValidGoogleMapsLink = (link) => {
-    //   const googleMapsRegex = /https?:\/\/(?:www\.)?google\.com\/maps\/place\/.*\/reviews\/.*/;
-    //   return googleMapsRegex.test(link);
-    // };
-
     if (!newReview.name || !newReview.text || !newReview.link) {
       alert("Please fill out all fields.");
       return;
@@ -49,20 +49,15 @@ const Dashboard = ({ handleLogout }) => {
 
     setLoadingAddReview(true);
 
-    // const videoLink = newReview.link.trim();
-
-    // if (!isValidGoogleMapsLink(videoLink)) {
-    //   alert("Please enter a valid Google Maps review link.");
-    //   setLoadingAddReview(false);
-    //   return;
-    // }
-
     try {
-      await addDoc(reviewsCollectionRef, newReview);
+      await addDoc(reviewsCollectionRef, { ...newReview, timestamp: serverTimestamp() });
       setNewReview({ name: "", text: "", link: "" });
 
       const data = await getDocs(reviewsCollectionRef);
-      setReviews([{ ...newReview, id: data.docs[0].id }, ...reviews]);
+      const sortedReviews = data.docs
+        .map((doc) => ({ ...doc.data(), id: doc.id }))
+        .sort((a, b) => b.timestamp - a.timestamp);
+      setReviews(sortedReviews);
     } catch (error) {
       console.error("Error adding review:", error.message);
       alert("An error occurred while adding the review. Please try again.");
@@ -96,30 +91,18 @@ const Dashboard = ({ handleLogout }) => {
   const addVideoReview = async () => {
     setLoadingAddVideoReview(true);
 
-    const isValidVideoLink = (link) => {
-      const youtubeRegex =
-        /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-      return youtubeRegex.test(link);
-    };
-
-    const videoLink = newVideoReview.link.trim();
-
-    if (!isValidVideoLink(videoLink)) {
-      alert("Please enter a valid embedded YouTube video link.");
-      setLoadingAddVideoReview(false);
-      setNewVideoReview({ link: "" });
-      return;
-    }
-
     try {
-      await addDoc(videoReviewsCollectionRef, { link: embedYoutubeLink(videoLink) });
+      await addDoc(videoReviewsCollectionRef, {
+        link: embedYoutubeLink(newVideoReview.link.trim()),
+        timestamp: serverTimestamp(),
+      });
       setNewVideoReview({ link: "" });
 
       const data = await getDocs(videoReviewsCollectionRef);
-      setVideoReviews([
-        { link: embedYoutubeLink(videoLink), id: data.docs[0].id },
-        ...videoReviews,
-      ]);
+      const sortedVideoReviews = data.docs
+        .map((doc) => ({ ...doc.data(), id: doc.id }))
+        .sort((a, b) => b.timestamp - a.timestamp);
+      setVideoReviews(sortedVideoReviews);
     } catch (error) {
       console.error("Error adding video review:", error.message);
       alert("An error occurred while adding the video review. Please try again.");
@@ -132,7 +115,10 @@ const Dashboard = ({ handleLogout }) => {
     setLoadingDeleteReview(true);
     await deleteDoc(doc(db, "reviews", id));
     const data = await getDocs(reviewsCollectionRef);
-    setReviews(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })).reverse());
+    const sortedReviews = data.docs
+      .map((doc) => ({ ...doc.data(), id: doc.id }))
+      .sort((a, b) => b.timestamp - a.timestamp);
+    setReviews(sortedReviews);
     setLoadingDeleteReview(false);
   };
 
@@ -140,7 +126,10 @@ const Dashboard = ({ handleLogout }) => {
     setLoadingDeleteVideoReview(true);
     await deleteDoc(doc(db, "videoReviews", id));
     const data = await getDocs(videoReviewsCollectionRef);
-    setVideoReviews(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })).reverse());
+    const sortedVideoReviews = data.docs
+      .map((doc) => ({ ...doc.data(), id: doc.id }))
+      .sort((a, b) => b.timestamp - a.timestamp);
+    setVideoReviews(sortedVideoReviews);
     setLoadingDeleteVideoReview(false);
   };
 

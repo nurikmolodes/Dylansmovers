@@ -11,12 +11,18 @@ const VideoPlayer = () => {
   const [loading, setLoading] = useState(true);
   console.log("VIDEO-REVIEWS", videoReviews);
   useEffect(() => {
-    const getVideoReviews = async () => {
-      const data = await getDocs(videoReviewsCollectionRef);
-      setVideoReviews(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    const fetchData = async () => {
+      setLoading(true);
+      const videoReviewsData = await getDocs(videoReviewsCollectionRef);
+      const sortedVideoReviews = videoReviewsData.docs
+        .map((doc) => ({ ...doc.data(), id: doc.id }))
+        .sort((a, b) => b.timestamp - a.timestamp);
+
+      setVideoReviews(sortedVideoReviews);
       setLoading(false);
     };
-    getVideoReviews();
+
+    fetchData();
   }, []);
 
   return (
