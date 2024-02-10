@@ -130,9 +130,11 @@ const Navbar = () => {
             </div>
           )}
         </div>
-        <button onClick={getFreeQuote} className="free-quote">
-          Get a free quote
-        </button>
+        {location.pathname !== "/admin-dashboard" && (
+          <button onClick={getFreeQuote} className="free-quote">
+            Get a free quote
+          </button>
+        )}
       </nav>
     </div>
   );
