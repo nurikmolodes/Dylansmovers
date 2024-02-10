@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable react/no-unescaped-entities */
 import "./Footer.scss";
 import { Link } from "react-router-dom";
@@ -31,7 +32,9 @@ const Footer = () => {
               loading="lazy"
               alt=""
             /> */}
-            <a href="https://www.google.com/maps?ll=38.867822,-77.27008&z=17&t=m&hl=en&gl=US&mapclient=embed&cid=15436103000119213251">
+            <a
+              href="https://www.google.com/maps?ll=38.867822,-77.27008&z=17&t=m&hl=en&gl=US&mapclient=embed&cid=15436103000119213251"
+              target="_blank">
               9411 Lee Hwy #103, Fairfax, VA 22031
             </a>
           </li>
@@ -50,8 +53,12 @@ const Footer = () => {
         <div className="very-bottom">
           <p>©2023 Dylan's Moving Services Northern Virginia, All Rights Reserved.</p>
           <div className="two-links">
-            <a href="">Terms & Conditions</a>
-            <a href="">Privacy Policy</a>
+            <a href="" target="_blank">
+              Terms & Conditions
+            </a>
+            <a href="" target="_blank">
+              Privacy Policy
+            </a>
           </div>
         </div>
       </div>

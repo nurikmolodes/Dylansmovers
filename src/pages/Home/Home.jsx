@@ -12,7 +12,7 @@ import why3 from "../../assets/why3.png";
 import why4 from "../../assets/why4.png";
 import "../../firebase";
 import { db } from "../../firebase";
-import { addDoc, collection, deleteDoc, doc, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 const Home = () => {
   const [section, setSection] = useState(1);

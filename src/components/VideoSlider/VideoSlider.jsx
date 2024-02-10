@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./VideoSlider.scss";
 import "../../firebase";
 import { db } from "../../firebase";
-import { addDoc, collection, deleteDoc, doc, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 const VideoPlayer = () => {
   // VIDEO REVIEWS

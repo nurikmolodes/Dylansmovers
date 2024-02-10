@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable no-useless-escape */
+/* eslint-disable react/jsx-no-duplicate-props */
+/* eslint-disable react/jsx-no-target-blank */
+/* eslint-disable react/prop-types */
+import { useEffect, useState } from "react";
 import "./Dashboard.scss";
 import "../../firebase";
 import { db } from "../../firebase";
-import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, getDocs } from "firebase/firestore";
 
 const Dashboard = ({ handleLogout }) => {
   const reviewsCollectionRef = collection(db, "reviews");
@@ -33,10 +37,10 @@ const Dashboard = ({ handleLogout }) => {
   }, []);
 
   const addReview = async () => {
-    const isValidGoogleMapsLink = (link) => {
-      const googleMapsRegex = /https?:\/\/(?:www\.)?google\.com\/maps\/place\/.*\/reviews\/.*/;
-      return googleMapsRegex.test(link);
-    };
+    // const isValidGoogleMapsLink = (link) => {
+    //   const googleMapsRegex = /https?:\/\/(?:www\.)?google\.com\/maps\/place\/.*\/reviews\/.*/;
+    //   return googleMapsRegex.test(link);
+    // };
 
     if (!newReview.name || !newReview.text || !newReview.link) {
       alert("Please fill out all fields.");
@@ -208,7 +212,7 @@ const Dashboard = ({ handleLogout }) => {
         <div className="review-list">
           {reviews.map((review) => (
             <div className="review-card" key={review.id}>
-              <a href={review.link}>
+              <a href={review.link} target="_blank" target="_blank">
                 <h3 className="review-name">{review.name}</h3>
                 <p className="review-text">{review.text}</p>
               </a>
