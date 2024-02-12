@@ -43,7 +43,7 @@ const Home = () => {
       <section
         className="header"
         style={{
-          background: `url(https://cdngeneral.rentcafe.com//dmslivecafe/UploadedImages/0648e513-cd26-4793-aa98-6e99f15d527f.jpg)`,
+          background: `url(https://scontent-iad3-2.xx.fbcdn.net/v/t1.6435-9/150456324_110993947695393_6868551717262337885_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=300f58&_nc_ohc=SjxDGE3MdL4AX93oCbD&_nc_oc=AQn-p92EAbVcm0OjB7AWTVzKd-CqXqC-C6fp4X0Lo73NAobEMRpyG4N5n1SyrUi2kuxlQ9nOgf41GbXhZCnhgPMG&_nc_ht=scontent-iad3-2.xx&oh=00_AfBcuhKsFOXa7buv1hXfpzo2x9-UHqMNtee_mlQ72sbzsw&oe=65F0EE41)`,
         }}>
         {section !== 5 && (
           <div className="top">
@@ -133,11 +133,8 @@ const Home = () => {
           </div>
           <div className="service">
             <img src={why2} alt="" />
-            <p className="up">Full Move Protection</p>
-            <p className="down">
-              Our movers take important steps to protect your home and cover all of your belongings
-              in full protection.
-            </p>
+            <p className="up">Ready For Any Sizes</p>
+            <p className="down">We serve in 16 feet and 26 feet trucks</p>
           </div>
           <div className="service">
             <img src={why1} alt="" />
@@ -149,10 +146,10 @@ const Home = () => {
           </div>
           <div className="service">
             <img src={why4} alt="" />
-            <p className="up">Ready For Any Sizes</p>
+            <p className="up">Our clients say it's the best</p>
             <p className="down">
-              From moving one item to a huge house or a small office to a whole building, it makes
-              no difference to us, we have trucks for any size of your move
+              Say goodbye to moving hassles and hello to excitement! We're not just movers; we're
+              your ticket to a hassle-free adventure. Let's make your move remarkable together!
             </p>
           </div>
         </div>

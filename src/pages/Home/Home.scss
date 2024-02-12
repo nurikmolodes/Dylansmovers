@@ -32,6 +32,7 @@
         font-weight: 800;
         line-height: 100%;
         color: white;
+        text-shadow: 0 0 3px #ff0000, 0 0 5px black;
         @media (max-width: 1000px) {
           font-size: 60px;
         }
@@ -41,6 +42,7 @@
         line-height: 120%;
         font-size: 32px;
         color: white;
+        text-shadow: 0 0 3px #ff0000, 0 0 5px black;
         @media (max-width: 1000px) {
           font-size: 28px;
         }
@@ -198,10 +200,10 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
-      @media (max-width: 1100px) {
+      @media (max-width: 1300px) {
         grid-template-columns: repeat(2, 1fr);
       }
-      @media (max-width: 566px) {
+      @media (max-width: 1050px) {
         grid-template-columns: repeat(1, 1fr);
       }
       .service {
@@ -212,9 +214,15 @@
         text-align: center;
         gap: 10px;
         img {
-          width: 250px;
+          width: 300px;
           height: 300px;
           object-fit: cover;
+          @media (max-width: 1300px) {
+            width: 500px;
+          }
+          @media (max-width: 544px) {
+            width: 100%;
+          }
         }
         .up {
           color: #3d204f;
@@ -222,6 +230,9 @@
           font-weight: 700;
           line-height: 110%;
           max-width: 220px;
+          @media (max-width: 1300px) {
+            max-width: 500px;
+          }
         }
         .down {
           font-weight: lighter;
@@ -229,6 +240,9 @@
           max-width: 220px;
           color: #3d204f;
           height: 100%;
+          @media (max-width: 1300px) {
+            max-width: 500px;
+          }
         }
       }
     }
