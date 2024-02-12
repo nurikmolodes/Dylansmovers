@@ -40,11 +40,7 @@ const Home = () => {
   }, []);
   return (
     <div className="home">
-      <section
-        className="header"
-        style={{
-          background: `url(https://scontent-iad3-2.xx.fbcdn.net/v/t1.6435-9/150456324_110993947695393_6868551717262337885_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=300f58&_nc_ohc=SjxDGE3MdL4AX93oCbD&_nc_oc=AQn-p92EAbVcm0OjB7AWTVzKd-CqXqC-C6fp4X0Lo73NAobEMRpyG4N5n1SyrUi2kuxlQ9nOgf41GbXhZCnhgPMG&_nc_ht=scontent-iad3-2.xx&oh=00_AfBcuhKsFOXa7buv1hXfpzo2x9-UHqMNtee_mlQ72sbzsw&oe=65F0EE41)`,
-        }}>
+      <section className="header">
         {section !== 5 && (
           <div className="top">
             <p className="title">DMV Area Movers</p>
