@@ -110,10 +110,10 @@ const About = () => {
             <img src="https://assets-global.website-files.com/62c6a1644fedf732c282fe5c/62e15ea7f23937aa405cc759_tools-fill.svg" />
             <span>Enjoy the most comprehensive moving service.</span>
             <p>
-              Take comfort in knowing that your movers are highly trained and extensivelyexperienced
-              in the field. We handle everything from packing to unpacking, fromdisassembly to
-              assembly, so you don’t have to worry about anything. Never has therebeen a service
-              that covers the full spectrum of what needs to get done.
+              Take comfort in knowing that your movers are highly trained and extensively experienced
+              in the field. We handle everything from packing to unpacking, from disassembly to
+              assembly, so you don’t have to worry about anything. Never has there been a service
+              that covers the full spectrum of what needs to get done.Selected as a <a href="https://www.localmovers.com/movers-in-alexandria" target="_blank">Top Mover</a> by localmovers.com. 
             </p>
           </div>
 
